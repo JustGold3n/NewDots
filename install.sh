@@ -28,7 +28,7 @@ git clone --depth 1 https://github.com/shaunsingh/nyoom.nvim.git ~/.config/nvim
 cd ~/.config/nvim/ || exit
 bin/nyoom install 
 bin/nyoom sync
-
+cd ~/newdots || exit
 
 cp -r ~/newdots/wezterm.lua  ~/.config/wezterm/wezterm.lua
 cp -r ~/newdots/init.lua ~/.config/nvim/init.lua
