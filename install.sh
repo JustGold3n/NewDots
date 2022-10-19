@@ -1,6 +1,6 @@
 #!/bin/bash
 
-mkdir ~/Gold3n_dotfiles && cd ~/Gold3n_dotfiles || exit 
+#mkdir ~/Gold3n_dotfiles && cd ~/Gold3n_dotfiles || exit 
 # intall paru
 sudo pacman -S vim --needed base-devel
 git clone https://aur.archlinux.org/paru.git
@@ -20,6 +20,7 @@ cp -r misc/home ~
 
 cp -r config/* ~/.config/
 cp -r misc/fonts/* ~/.fonts/
+cp -r ~/newdots/fire.jpg .config/awesome/theme/assets/fire.jpg
 
 fc-cache -fv
 # nvim config (nyoom, neovide + custom)
@@ -29,13 +30,14 @@ bin/nyoom install
 bin/nyoom sync
 
 
-cp -r ~/Gold3n_dotfiles/wezterm.lua  ~/.config/wezterm/wezterm.lua
-cp -r ~/Gold3n_dotfiles/init.lua ~/.config/nvim/init.lua
-cp -r ~/Gold3n_dotfiles/apps.lua ~/.config/awesome/configuration/apps.lua
-#git clone https://github.com/rxyhn/AestheticStuff.git
+cp -r ~/newdots/wezterm.lua  ~/.config/wezterm/wezterm.lua
+cp -r ~/newdots/init.lua ~/.config/nvim/init.lua
+cp -r ~/newdots/apps.lua ~/.config/awesome/configuration/apps.lua
 
-#sudo cp -rf Aesthetic-Night/* /usr/share/themes
-#cp -rf Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
+git clone https://github.com/rxyhn/AestheticStuff.git
 
-#echo "gtk-decoration-layout=close,maximize,minimize:menu" >> ~/.config/gtk-3.0/settings.ini
+sudo cp -rf Aesthetic-Night/* /usr/share/themes
+cp -rf Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
+
+echo "gtk-decoration-layout=close,maximize,minimize:menu" >> ~/.config/gtk-3.0/settings.ini
 #https://github.com/rxyhn/yoru/tree/eadcff1c79221aae8f31362449bb4cd52f018186
