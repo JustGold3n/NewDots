@@ -28,16 +28,17 @@ git clone --depth 1 https://github.com/shaunsingh/nyoom.nvim.git ~/.config/nvim
 cd ~/.config/nvim/ || exit
 bin/nyoom install 
 bin/nyoom sync
-cd ~/newdots || exit
+
 
 cp -r ~/newdots/wezterm.lua  ~/.config/wezterm/wezterm.lua
 cp -r ~/newdots/init.lua ~/.config/nvim/init.lua
 cp -r ~/newdots/apps.lua ~/.config/awesome/configuration/apps.lua
 
 git clone https://github.com/rxyhn/AestheticStuff.git
+cd AestheticStuff || exit
 
-sudo cp -rf Aesthetic-Night/* /usr/share/themes
-cp -rf Aesthetic-Night-GTK4/* ~/.config/gtk-4.0
+#sudo cp -rf Aesthetic-Night/* /usr/share/themes
+cp -rf gtk/* ~/.config/gtk-4.0
 
 echo "gtk-decoration-layout=close,maximize,minimize:menu" >> ~/.config/gtk-3.0/settings.ini
 #https://github.com/rxyhn/yoru/tree/eadcff1c79221aae8f31362449bb4cd52f018186
